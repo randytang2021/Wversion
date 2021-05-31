@@ -6,6 +6,7 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 30
+        buildConfigField("String", "BASE_BUILD_GRADLE_NAME", "\"base builk gradle name one\"")
     }
 
     compileOptions {
