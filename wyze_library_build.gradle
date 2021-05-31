@@ -1,1 +1,1 @@
-apply from: "../wyze_base_build.gradle"
+apply from: "https://raw.githubusercontent.com/randytang2021/Wversion/master/wyze_base_build.gradle"
