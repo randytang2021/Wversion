@@ -1,8 +1,11 @@
 plugins {
     id 'com.android.application'
 }
-apply from: "https://raw.githubusercontent.com/randytang2021/Wversion/master/wyze_app_build.gradle"
+
+apply from: "../wyze_app_build.gradle"
+
 android {
+
     defaultConfig {
         applicationId "com.wyze.wversion"
         versionCode 1
