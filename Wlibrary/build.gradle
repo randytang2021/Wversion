@@ -24,8 +24,8 @@ dependencies {
     testImplementation commonTestDependencies.jUnit
 
 
-    Map<String, String> commonAndroidTestDependpencies = globalConf.commonAndroidTestDependpencies
-    androidTestImplementation commonAndroidTestDependpencies.testExtJunit
-    androidTestImplementation commonAndroidTestDependpencies.testEspressoCore
+    Map<String, String> commonAndroidTestDependencies = globalConf.commonAndroidTestDependpencies
+    androidTestImplementation commonAndroidTestDependencies.testExtJunit
+    androidTestImplementation commonAndroidTestDependencies.testEspressoCore
 
 }
