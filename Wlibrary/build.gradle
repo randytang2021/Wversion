@@ -2,7 +2,9 @@ plugins {
     id 'com.android.library'
 }
 
-apply from: "../wyze_library_build.gradle"
+//apply from: "../wyze_library_build.gradle"
+apply from: "https://raw.githubusercontent.com/randytang2021/Wversion/master/wyze_base_build.gradle"
+
 
 android {
     defaultConfig {
