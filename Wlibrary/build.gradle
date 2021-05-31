@@ -2,12 +2,12 @@ plugins {
     id 'com.android.library'
 }
 
-apply from: "../wyze_app_build.gradle"
+apply from: "../wyze_base_build.gradle"
 
 android {
     defaultConfig {
-        buildConfigField("String", "WYZE_PLUGIN_VERSION_NAME", "\"Wlibrary plugin\"")
-        buildConfigField("int", "WYZE_PLUGIN_VERSION_CODE", "1")
+        buildConfigField("String", "WYZE_PLUGIN_VERSION_NAME", "\"Wlibrary plugin version name\"")
+        buildConfigField("int", "WYZE_PLUGIN_VERSION_CODE", "2")
     }
 }
 
