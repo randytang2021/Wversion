@@ -21,13 +21,21 @@ android {
     }
 }
 
+def globalConf = rootProject.ext
+
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.3.0'
-    implementation 'com.google.android.material:material:1.3.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    Map<String, String> commonAndroidDependencies = globalConf.commonAndroidDependencies
+    implementation commonAndroidDependencies.appCompat
+    implementation commonAndroidDependencies.androidMaterial
+    implementation commonAndroidDependencies.constraintlayout
+
+    Map<String, String> commonTestDependencies = globalConf.commonTestDependencies
+    testImplementation commonTestDependencies.jUnit
+
+    Map<String, String> commonAndroidTestDependencies = globalConf.commonAndroidTestDependpencies
+    androidTestImplementation commonAndroidTestDependencies.testExtJunit
+    androidTestImplementation commonAndroidTestDependencies.testEspressoCore
 
     implementation project(':Wlibrary')
 }
