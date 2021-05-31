@@ -1,3 +1,4 @@
+apply from: 'wyze_version.gradle'
 buildscript {
     repositories {
         google()

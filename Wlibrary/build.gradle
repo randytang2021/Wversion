@@ -5,7 +5,6 @@ plugins {
 //apply from: "../wyze_library_build.gradle"
 apply from: "https://raw.githubusercontent.com/randytang2021/Wversion/master/wyze_base_build.gradle"
 
-
 android {
     defaultConfig {
         buildConfigField("String", "WYZE_PLUGIN_VERSION_NAME", "\"Wlibrary plugin version name\"")
@@ -13,10 +12,20 @@ android {
     }
 }
 
+def globalConf = rootProject.ext
+
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.3.0'
-    implementation 'com.google.android.material:material:1.3.0'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    Map<String, String> commonAndroidDependencies = globalConf.commonAndroidDependencies
+    implementation commonAndroidDependencies.appCompat
+    implementation commonAndroidDependencies.androidMaterial
+
+    Map<String, String> commonTestDependencies = globalConf.commonTestDependencies
+    testImplementation commonTestDependencies.jUnit
+
+
+    Map<String, String> commonAndroidTestDependpencies = globalConf.commonAndroidTestDependpencies
+    androidTestImplementation commonAndroidTestDependpencies.testExtJunit
+    androidTestImplementation commonAndroidTestDependpencies.testEspressoCore
+
 }
