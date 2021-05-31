@@ -7,7 +7,6 @@ public class Info {
     private static String getBuildInfo() {
         StringBuilder sb = new StringBuilder();
         sb.append("Wlibrary build info:").append("\n");
-        sb.append(BuildConfig.CLOUD_NAME).append("\n");
         sb.append(BuildConfig.BUILD_TYPE).append("\n");
         sb.append(BuildConfig.WYZE_PLUGIN_VERSION_CODE).append("\n");
         sb.append(BuildConfig.WYZE_PLUGIN_VERSION_NAME).append("\n");
