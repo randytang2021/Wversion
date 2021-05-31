@@ -1,4 +1,5 @@
-apply from: 'wyze_version.gradle'
+//apply from: 'wyze_version.gradle'
+apply from: 'https://raw.githubusercontent.com/randytang2021/Wversion/master/wyze_version.gradle'
 buildscript {
     repositories {
         google()
