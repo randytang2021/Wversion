@@ -1,3 +1,3 @@
-# Wversion
+# Wversion: Wyze Version
 
-apply from remote gradle file
+Apply from remote gradle config file.
